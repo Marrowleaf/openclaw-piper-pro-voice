@@ -105,6 +105,8 @@ This file maps standard English words to phonetic spellings that the Piper TTS e
 | Pattern | Replacement | Context |
 | :--- | :--- | :--- |
 | 1920s | nine-teen twen-tys | Decade format |
+| 1908 | nineteen oh eight | Year format (1900s) |
+| 90210 | nine oh two one oh | US zip code format |
 | 19XX | nine-teen XX | Year 1900s format |
 | 20XX | twen-ty XX | Year 2000s format |
 | 5-digit codes | digit-by-digit | Zip codes, phone prefixes |
@@ -184,6 +186,8 @@ This file maps standard English words to phonetic spellings that the Piper TTS e
 | Original Word | Phonetic Replacement | Note |
 | :--- | :--- | :--- |
 | $100 | one hun-dred dol-lars | Fixes "dollar one hundred" |
+| $500 | five hun-dred dol-lars | Fixes "dollar five hundred" |
+| $50 | fif-ty dol-lars | Fixes "dollar fifty" |
 | £50 | fif-ty pounds | Fixes "pound fifty" |
 | €20 | twen-ty eu-ros | Fixes "euro twenty" |
 | USD | U-S-D | Forces letter spelling |
