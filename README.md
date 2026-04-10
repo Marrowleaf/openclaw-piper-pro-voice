@@ -12,6 +12,15 @@ Standard TTS often struggles with specific words, blending them together or misp
 - **Multi-Fidelity Support**: Optimized for various ONNX voice models, allowing users to switch between "Low", "Medium", and "High" fidelity voices based on their hardware and preference.
 - **Local-First**: Zero cloud dependency. No API keys, no monthly subscriptions, and zero latency.
 
+## 📱 Integrated Messaging Delivery
+
+A voice is only as good as its delivery. Piper Pro Voice is engineered for seamless integration with modern messaging surfaces, particularly **Telegram, Discord, and WhatsApp**.
+
+By leveraging a specialized synthesis-to-delivery pipeline, the system ensures:
+- **Native Audio Format**: Automatic conversion to MP3/OGG to ensure native playback on mobile devices.
+- **Asynchronous Delivery**: Synthesis happens in the background, delivering "voice notes" that feel like a natural part of the conversation rather than a static file attachment.
+- **Contextual Voice Responses**: Ability to trigger voice replies based on specific agent intents, transforming a text-based assistant into a truly interactive companion.
+
 ## 🚀 Quick Start
 
 ### 1. Prerequisites
