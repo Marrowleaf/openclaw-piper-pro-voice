@@ -165,7 +165,7 @@ This file maps standard English words to phonetic spellings that the Piper TTS e
 | repo | ree-poh | Natural abbreviation |
 | regex | reg-ex | Fixes "re-jex" |
 | CLI | C-L-I | Forces letter spelling |
-| GUI | Goo-ey | Natural pronunciation |
+| GUI | G U I | Letter by letter |
 | IDE | I-D-E | Forces letter spelling |
 | VPN | V-P-N | Forces letter spelling |
 | DNS | D-N-S | Forces letter spelling |
