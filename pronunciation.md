@@ -499,4 +499,14 @@ This file maps standard English words to phonetic spellings that the Piper TTS e
 | Geis | Ghice | Name pronunciation fix (rhasspy/piper #711) |
 | *test* | star-test-star | Wrap in phonetics to hear asterisk |
 
+## 🔧 Technical Limitations & Workarounds
+| Original Word | Phonetic Replacement | Note |
+| :--- | :--- | :--- |
+| (single short word) | word word word | Piper struggles with single words alone - repeat 3x, clip output |
+| long text | break into sentences | Long passages cause mumbling (piper issue #211) |
+| .5 | point five | Decimal point fix (piper reads '.' as sentence end) |
+| .25 | point two five | Decimal fraction fix |
+| 3.14 | three point one four | Decimal numbers need explicit word form |
+| $19.99 | nineteen dol-lars ninety-nine | Currency with decimals |
+
 > **Tip**: If a phonetic spelling doesn't work, try an alternate spelling that sounds similar. Piper sometimes ignores direct phonetics but responds to creative alternatives.
