@@ -1,31 +1,75 @@
-# Piper Pro Voice - High Fidelity Local TTS for OpenClaw
+# Piper Pro Voice - Free Voice Messages for OpenClaw
 
-Piper Pro Voice is a refined text-to-speech implementation for OpenClaw that moves beyond basic synthesis. It introduces a **Pronunciation Layer** and a **Voice Management** system to eliminate robotic artifacts and provide a more natural human experience.
+Piper Pro Voice lets your OpenClaw agent send voice messages **without paying for cloud TTS APIs** (OpenAI, ElevenLabs, etc.). It uses local Piper TTS synthesis to generate MP3 voice notes for Telegram, Discord, and other messaging platforms—completely free, with no usage limits.
 
-## 🌟 Key Features
-- **Pronunciation Mapping**: A dedicated guide to map problematic words to phonetic equivalents (e.g., "winds" -> "windz").
-- **Multi-Fidelity Voices**: Support for various ONNX voice models (Low, Medium, High).
-- **Zero-Latency Local Execution**: Runs entirely on-device with no cloud APIs or costs.
-- **Telegram/Discord Ready**: Integrated pipeline for delivering high-quality MP3 voice notes.
+## Why Use This?
 
-## 🛠️ Installation
-1. Install the `piper` binary and `ffmpeg` on your host.
-2. Download the desired ONNX voice models to the `voices/` directory.
-3. Configure your `TOOLS.md` with the paths to your models.
+Most AI platforms charge extra for voice features:
+- **OpenAI TTS**: $0.015 per 1K characters
+- **ElevenLabs**: Limited free tier, then paid subscriptions
+- **Google/Amazon**: Monthly fees, usage quotas
 
-## 📖 The Pronunciation Layer
-The secret to natural speech in Piper is the pronunciation guide. Instead of sending raw text, the agent processes text through a mapping file:
+**Piper Pro Voice: $0 forever.** Local synthesis, unlimited messages.
 
-**Example Mapping:**
-- `degrees` ➔ `de-grees`
-- `winds` ➔ `windz`
-- `AI` ➔ `A-I`
+## What It Actually Does
 
-## 🚀 Usage
-Use the provided scripts to generate audio:
-`echo "Your text here" | ./scripts/speak.sh`
+This isn't about "pro audio quality"—it's about **enabling voice communication without the paywall**.
 
-## 📦 Structure
-- `/scripts`: Core synthesis and conversion scripts.
-- `/voices`: ONNX models and config files.
-- `pronunciation.md`: The phonetic mapping guide.
+- **Local synthesis**: Piper TTS runs on your machine
+- **Zero API costs**: No cloud calls, no usage limits
+- **Good enough quality**: Fine for Telegram voice notes, quick replies, notifications
+- **Messaging ready**: Generates MP3s that play natively in Telegram/Discord
+
+## How It Works
+
+1. Agent decides to reply with voice
+2. **Piper synthesizes** locally using ONNX models
+3. **ffmpeg converts** WAV → MP3
+4. **Voice note sent** via Telegram/Discord
+
+## Installation
+
+1. Install `piper` binary and `ffmpeg` on your host
+2. Download ONNX voice models to `voices/` directory
+3. Configure paths in `TOOLS.md`
+
+## The Pronunciation Layer
+
+Piper can struggle with some words. The `pronunciation.md` file maps problematic terms to phonetic spellings before synthesis:
+
+- `degrees` → `de-grees`
+- `winds` → `windz`
+- `AI` → `A-I`
+
+This fixes robotic artifacts without needing expensive cloud voices.
+
+## Usage
+
+Generate a voice message:
+```bash
+echo "Your text here" | ./scripts/speak.sh
+```
+
+Output goes to `/root/.openclaw/workspace/media/voice.mp3`, ready to send.
+
+## Cost Comparison
+
+| Method | Cost Per 1K Messages | Notes |
+|--------|-------------------|-------|
+| OpenAI TTS | ~$45/month | Per-character billing |
+| ElevenLabs | $5-50+/month | Tiered plans |
+| **Piper Pro Voice** | **$0** | **Unlimited, local** |
+
+## Structure
+
+```
+piper-pro-voice/
+├── SKILL.md           # This file
+├── README.md          # Project documentation
+├── pronunciation.md   # Word → phonetic mappings
+└── scripts/
+    └── speak.sh       # Synthesis pipeline
+```
+
+---
+*Free voice for agents. No subscriptions. No limits.*
