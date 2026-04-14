@@ -1,6 +1,6 @@
-# Piper Pro Voice - Free Voice Messages for OpenClaw
+# LocalTTS - Free Voice Messages for OpenClaw
 
-Piper Pro Voice lets your OpenClaw agent send voice messages **without paying for cloud TTS APIs** (OpenAI, ElevenLabs, etc.). It uses local Piper TTS synthesis to generate MP3 voice notes for Telegram, Discord, and other messaging platforms—completely free, with no usage limits.
+LocalTTS lets your OpenClaw agent send voice messages **without paying for cloud TTS APIs** (OpenAI, ElevenLabs, etc.). It uses local Piper TTS synthesis to generate MP3 voice notes for Telegram, Discord, and other messaging platforms—completely free, with no usage limits.
 
 ## Why Use This?
 
@@ -9,7 +9,7 @@ Most AI platforms charge extra for voice features:
 - **ElevenLabs**: Limited free tier, then paid subscriptions
 - **Google/Amazon**: Monthly fees, usage quotas
 
-**Piper Pro Voice: $0 forever.** Local synthesis, unlimited messages.
+**LocalTTS: $0 forever.** Local synthesis, unlimited messages.
 
 ## What It Actually Does
 
@@ -58,12 +58,12 @@ Output goes to `/root/.openclaw/workspace/media/voice.mp3`, ready to send.
 |--------|-------------------|-------|
 | OpenAI TTS | ~$45/month | Per-character billing |
 | ElevenLabs | $5-50+/month | Tiered plans |
-| **Piper Pro Voice** | **$0** | **Unlimited, local** |
+| **LocalTTS** | **$0** | **Unlimited, local** |
 
 ## Structure
 
 ```
-piper-pro-voice/
+localtts/
 ├── SKILL.md           # This file
 ├── README.md          # Project documentation
 ├── pronunciation.md   # Word → phonetic mappings

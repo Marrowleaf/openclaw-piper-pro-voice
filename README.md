@@ -1,8 +1,8 @@
-# 🎙️ Piper Pro Voice
+# 🎙️ LocalTTS
 
 **Free Voice Messages for AI Agents**
 
-Piper Pro Voice lets your OpenClaw agent send voice messages without paying for "Pro" language model APIs. Instead of routing text to expensive cloud TTS services (OpenAI, ElevenLabs, etc.), this runs locally on your host—completely free.
+LocalTTS lets your OpenClaw agent send voice messages **without paying for cloud TTS APIs**. Instead of routing text to expensive cloud services (OpenAI, ElevenLabs, etc.), this runs locally on your host—completely free.
 
 ## The Problem It Solves
 
@@ -11,7 +11,7 @@ Most AI platforms charge extra for voice:
 - ElevenLabs: Limited free tier, then paid
 - Cloud providers: Monthly subscriptions, usage caps
 
-**Piper Pro Voice is the free alternative.** Run synthesis locally, pay nothing, speak unlimited.
+**LocalTTS is the free alternative.** Run synthesis locally, pay nothing, speak unlimited.
 
 ## What This Actually Is
 
@@ -20,7 +20,7 @@ This isn't about "pro audio quality"—it's about **enabling voice communication
 - **Local synthesis**: Piper TTS runs on your machine
 - **Zero API costs**: No cloud calls, no usage limits
 - **Good enough quality**: Fine for Telegram voice notes, quick replies, notifications
-- **Telegram/Discord ready**: Generates MP3s that play natively in messaging apps
+- **Messaging ready**: Generates MP3s that play natively in Telegram/Discord
 
 ## How It Works
 
@@ -59,14 +59,14 @@ This fixes robotic artifacts without needing expensive cloud voices.
 |--------|------------------|-------------------|
 | OpenAI TTS | ~$0.0015 | ~$45 |
 | ElevenLabs | Limited free, then paid | $5-50+ |
-| **Piper Pro Voice** | **$0** | **$0** |
+| **LocalTTS** | **$0** | **$0** |
 
 ## Project Structure
 
 ```
-piper-pro-voice/
-├── SKILL.md           # OpenClaw integration
+localtts/
 ├── README.md          # This file
+├── SKILL.md           # OpenClaw skill documentation
 ├── pronunciation.md   # Word → phonetic mappings
 └── scripts/
     └── speak.sh       # Synthesis pipeline
