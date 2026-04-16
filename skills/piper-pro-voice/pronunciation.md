@@ -32,6 +32,8 @@
 | Input | Pronounced As | Workaround |
 |-------|----------------|------------|
 | Geis | "gice" (wrong) | "Ghice" |
+| St John | "saint john" or "sinjohn" | UK: "Sinjin" (proper name) |
+| St. Mary | "sint mary" | Context-dependent: "Saint Mary" or "Street Mary" |
 | St John | "sinjin" (UK) | Context: Saint vs street | "Saint John" or "Sinjin" |
 | St. Patrick | "sin patrick" | Irish Saint | "Saint Patrick" |
 
@@ -155,7 +157,47 @@ When numbers have special meaning (phone numbers, zip codes, years), spell them 
 | chmod | "c h m o d" | "change mode" | Say "change mode" |
 | sudo apt-get | "sue-doo apt get" | "sue-doo apt get" | Keep as-is |
 
+## Additional Issues (from Recent Research)
+
+### Em-dashes and Ellipsis Workarounds
+| Input | Pronounced As | Should Be | Workaround |
+|-------|----------------|-----------|------------|
+| thought—actually | "thought actually" | Pause for dash | Replace "—" with "." |
+| I just… I just want | "I just I just want" | Pause between phrases | Replace "…" with "." |
+
+### More Common Problematic Terms
+| Input | Pronounced As | Should Be | Workaround |
+|-------|----------------|-----------|------------|
+| etc | "e t c" | "etcetera" | Expand to "etcetera" |
+| eg | "e g" | "for example" | Expand to "for example" |
+| ie | "i e" | "that is" | Expand to "that is" |
+| vs | "v s" | "versus" | Expand to "versus" |
+| approx | "a p p r o x" | "approximately" | Expand to "approximately" |
+| info | "i n f o" | "information" | Usually OK, but context matters |
+| photo | "ph o t o" | "photo" | Already good, may need emphasis |
+| email | "e m a i l" | "email" | Already good in most voices |
+
+### UK-Specific Pronunciations
+| Input | Pronounced As | Should Be | Workaround |
+|-------|----------------|-----------|------------|
+| Garage | "garidge" (US) | "garahj" (UK) | Voice-dependent |
+| Z | "zee" (US) | "zed" (UK) | Use "zed" for UK |
+| Herb | "erb" (US) | "herb" (UK) | Already good in UK voices |
+| Aluminium | "aloo-minium" (US) | "al-yoo-minium" (UK) | Use phonetic "al-yoo-min-ee-um" |
+
+### Software & Tech Terms
+| Input | Pronounced As | Should Be | Workaround |
+|-------|----------------|-----------|------------|
+| GitHub | "g i t h u b" | "git hub" | Say "git hub" |
+| JavaScript | "j a v a s c r i p t" | "javascript" | Already generally OK |
+| Python | "p y t h o n" | "python" | OK in most cases |
+| HTTP | "h t t p" | "H T T P" or "aitch-tee-tee-pee" | Spell out |
+| API | "a p i" | "A P I" or "ay-pee-eye" | Spell out |
+| GPU | "g p u" | "G P U" | Spell out |
+| CPU | "c p u" | "C P U" | Spell out |
+
 ## Contributing
+
 
 Add new problematic words here with:
 - The original text
