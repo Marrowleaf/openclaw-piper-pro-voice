@@ -43,6 +43,10 @@
 | Gen. | "general" (with pause) | "General" |
 | Lt. | "lieutenant" (with pause) | "Lieutenant" |
 | Sgt. | "sergeant" (with pause) | "Sergeant" |
+| Maj. | "major" (with pause) | "Major" |
+| Col. | "colonel" (with pause) | "Colonel" |
+| Rep. | "representative" (with pause) | "Representative" |
+| Sen. | "senator" (with pause) | "Senator" |
 
 ### Years & Dates
 | Input | Pronounced As | Should Be |
@@ -50,6 +54,17 @@
 | 1920 | "one thousand nine hundred and twenty" | "nineteen twenty" |
 | 1908 | "one thousand nine hundred and eight" | "nineteen oh eight" |
 | 90210 | "ninety thousand two hundred and ten" | "nine zero two one zero" (zip code) |
+
+### Units of Measurement
+| Input | Pronounced As | Should Be |
+|-------|----------------|-----------|
+| kph | "k p h" | "kilometers per hour" |
+| mph | "m p h" | "miles per hour" |
+| °C | "degree c" | "degrees Celsius" |
+| °F | "degree f" | "degrees Fahrenheit" |
+| kg | "k g" | "kilograms" |
+| m² | "m 2" | "square meters" |
+| km² | "k m 2" | "square kilometers" |
 
 ### Homographs (context-dependent)
 | Word | Verb (like) | Noun (like) |
