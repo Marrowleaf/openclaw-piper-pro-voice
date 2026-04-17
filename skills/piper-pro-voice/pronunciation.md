@@ -32,6 +32,7 @@
 | Input | Pronounced As | Workaround |
 |-------|----------------|------------|
 | Geis | "gice" (wrong) | "Ghice" |
+| Surname with -ge | varies | Try adding 'h' after g: "Gheis", "Ghemany" |
 | St John | "saint john" or "sinjohn" | UK: "Sinjin" (proper name) |
 | St. Mary | "sint mary" | Context-dependent: "Saint Mary" or "Street Mary" |
 | St John | "sinjin" (UK) | Context: Saint vs street | "Saint John" or "Sinjin" |
@@ -76,6 +77,11 @@
 | record | /rɪˈkɔːrd/ | /ˈrekɔːrd/ |
 | object | /əbˈdʒɛkt/ | /ˈɒbdʒɛkt/ |
 
+**Workaround for homographs:** Since Piper cannot reliably distinguish context, pre-process text based on known usage:
+- For dates/years: use "19 20" format or spelled years
+- For website "live": consider "launched" or "active"
+- For verb "live": use "reside" or "dwell" as alternative
+
 ## Usage
 
 Apply these replacements in pre-processing before sending text to Piper TTS:
@@ -116,6 +122,17 @@ Piper often skips ellipsis ("…") and em-dashes ("—") entirely instead of tre
 
 ### Decimal Fractions
 Piper may interpret periods at end of sentences as decimal points. Add space after period before numbers: "5. 5" instead of "5.5"
+
+| Input | Pronounced As | Should Be | Workaround |
+|-------|----------------|-----------|------------|
+| 5.5 | "five point five" | "five point five" or decimal | Add space: "5. 5"
+| 3.14 | "three point fourteen" | "three point one four" | Spell out digits: "three one four"
+
+### Years (Two-Digit Format)
+| Input | Pronounced As | Should Be | Workaround |
+|-------|----------------|-----------|------------|
+| 1920s | "one thousand nine hundred and twenties" | "nineteen twenties" | Use "19 20s" or "nineteen twenties"
+| 1980s | "one thousand nine hundred and eighties" | "nineteen eighties" | Use "19 80s" or "nineteen eighties"
 
 ### Numbers in Context
 When numbers have special meaning (phone numbers, zip codes, years), spell them out phonetically or use word forms.
@@ -195,6 +212,32 @@ When numbers have special meaning (phone numbers, zip codes, years), spell them 
 | API | "a p i" | "A P I" or "ay-pee-eye" | Spell out |
 | GPU | "g p u" | "G P U" | Spell out |
 | CPU | "c p u" | "C P U" | Spell out |
+
+## Additional Issues (from GitHub Issues #711, #363)
+
+### More Problem Words from Community Reports
+| Input | Pronounced As | Should Be | Workaround |
+|-------|----------------|-----------|------------|
+| Data | "day-ta" or "da-ta" | "day-ta" (US) or "dah-ta" (UK) | Usually context-dependent |
+| Router | "row-ter" | "rou-ter" | Use "rou-ter" spelling |
+| Agile | "aj-ul" or "aj-ile" | "aj-ile" | Emphasize second syllable |
+| HTTP | "h t t p" | "aitch tee tee pee" | Spell out letters |
+| HTTPS | "h t t p s" | "aitch tee tee pee ess" | Spell out letters |
+| PDF | "p d f" | "pee dee eff" | Spell out letters |
+| GIF | "g i f" or "jif" | "jif" (common) or "g i f" | Use "JIF" for common pronunciation |
+| Cache | "cash" | "cash" (correct) or "cah-shay" | Already correct in most cases |
+| Azure | "az-yur" | "az-hure" | UK: "az-yoo" |
+| Regex | "rej-ex" | "rej-ex" or "reg-ex" | Either works |
+| sudo | "soo-doo" | "soo-doo" | Already good |
+
+### Surname Pronunciation Tips
+Many surnames get mispronounced. Try these patterns:
+- Add 'h' after soft 'g': "Gharrison" instead of "Garrison"
+- Use 'ph' for 'f' sound: "Philip" not "Filp"
+- Double vowels for long sounds: "Paige" vs "Page"
+
+
+---
 
 ## Contributing
 
