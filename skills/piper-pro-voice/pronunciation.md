@@ -4,13 +4,18 @@
 
 ## Common Issues (from rhasspy/piper GitHub issues)
 
-### Roman Numerals
+### Roman Numerals & Standalone Numbers
 | Input | Pronounced As | Should Be |
 |-------|----------------|-----------|
 | World War II | "World War roman 2" | "World War Two" |
 | World War I | "World War roman 1" | "World War One" |
 | III | "roman 3" | "Three" |
 | IV | "roman 4" | "Four" |
+| 10 | "one zero" (in some models) | "ten" |
+| 11 | "one one" | "eleven" |
+| 12 | "one two" | "twelve" |
+
+*Note:* Some Piper VITS models with eSpeak-NG mispronounce numbers 10+ as separate digits. Pre-process with word forms: "ten", "eleven", "twelve".
 
 ### Currency & Numbers
 | Input | Pronounced As | Should Be |
