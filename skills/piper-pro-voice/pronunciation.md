@@ -248,11 +248,26 @@ Many surnames get mispronounced. Try these patterns:
 - Use 'ph' for 'f' sound: "Philip" not "Filp"
 - Double vowels for long sounds: "Paige" vs "Page"
 
+### Long Text Issues (GitHub Issue #211)
+| Issue | Description | Workaround |
+|-------|-------------|------------|
+| Mumbling after long text | Piper starts mumbling or becomes unintelligible after ~1-2 minutes of continuous text | Break long text into shorter segments with explicit pauses |
+| Flat streaming audio | Streaming output via pipe sounds flatter than file output | Use file output when possible (GitHub Issue #698) |
+
+### Punctuation in Python (GitHub Issue #122)
+| Issue | Description | Workaround |
+|-------|-------------|------------|
+| Punctuation not read | Commas, periods not producing pauses in Python API | Use `piper_phonemize` or install patched espeak-ng fork |
+| Voice-dependent punctuation | Some voices were trained without punctuation data | Use expressive voices (e.g., en_US-amy-medium, en_US-libritts-high) |
+
+### General Sound Quality Notes
+- Piper is a neural TTS, but some users report it sounds "flat" or "jumpy" compared to modern cloud TTS
+- This is a model limitation, not fixable via text preprocessing
+- Consider higher-quality voices like en_US-libritts-high for better results
 
 ---
 
 ## Contributing
-
 
 Add new problematic words here with:
 - The original text
