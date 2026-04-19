@@ -224,6 +224,32 @@ When numbers have special meaning (phone numbers, zip codes, years), spell them 
 | API | "a p i" | "A P I" or "ay-pee-eye" | Spell out |
 | GPU | "g p u" | "G P U" | Spell out |
 | CPU | "c p u" | "C P U" | Spell out |
+| npm | "n p m" | "N P M" or "en-pee-emm" | Spell out letters |
+| Docker | "d o c k e r" | "docker" | Already generally OK |
+| Kubernetes | "k u b e r n e t e s" | "koo-ber-net-ees" | Use phonetic "koo-ber-net-ees" |
+
+## Additional Issues (from GitHub Issues #122, #756)
+
+### Python API Punctuation Fix (piper_phonemize)
+Piper's Python API often drops punctuation marks, making speech sound robotic. The `piper_phonemize` tool can fix this:
+
+| Issue | Description | Solution |
+|-------|-------------|----------|
+| Punctuation not read in Python | Commas, periods not producing pauses | Use `piper_phonemize` from piper_phonemize package |
+| System espeak-ng used | Python uses system espeak-ng instead of patched version | Install piper_phonemize: `pip install piper_phonemize` |
+
+*Note:* Even with the patched espeak-ng, the Python code needs `piper_phonemize` to preserve punctuation. See GitHub Issue #122 for details.
+
+### Numbers 10+ Fix (GitHub Issue #756)
+Some Piper VITS models pronounce numbers 10+ as separate digits ("10" → "one zero"). This is an eSpeak-NG integration issue:
+
+| Input | Pronounced As | Should Be | Workaround |
+|-------|----------------|-----------|------------|
+| 10 | "one zero" | "ten" | Pre-process: "ten" |
+| 25 | "two five" | "twenty-five" | Pre-process: "twenty-five" |
+| 100 | "one zero zero" | "one hundred" | Pre-process: "one hundred" |
+
+*Note:* This issue is model-dependent. Some models handle numbers correctly while others require text pre-processing.
 
 ## Additional Issues (from GitHub Issues #711, #363)
 
