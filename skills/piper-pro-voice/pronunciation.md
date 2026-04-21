@@ -334,6 +334,34 @@ Piper now supports direct IPA phoneme input using double bracket syntax:
 
 ---
 
+## Additional Issues (from GitHub Issue #252 - Single Word Intonation)
+
+Piper often mispronounces single short words when spoken alone. This is a known training data limitation:
+
+| Input | Pronounced As | Should Be | Workaround |
+|-------|----------------|-----------|------------|
+| yes | Garbled/robotic | "yes" | Add context: "yes, that's correct" |
+| no | Garbled/robotic | "no" | Add context: "no, thank you" |
+| what | Garbled/robotic | "what" | Add context: "what is that" |
+| dog | Garbled/robotic | "dog" | Add context: "the dog" |
+| busy | Garbled/robotic | "busy" | Add context: "I'm busy" |
+| me | Garbled/robotic | "me" | Add context: "ask me" |
+| it | Garbled/robotic | "it" | Add context: "it works" |
+| us | Garbled/robotic | "us" | Add context: "join us" |
+
+*Note:* Single-syllable words often sound garbled because Piper's training data lacked sufficient single-word examples. The workaround is to repeat the word or add surrounding context (e.g., "yes yes" or "yes, I agree").
+
+### Why Single Words Sound Robotic
+From GitHub Issue #252: The training samples didn't have enough short lines, so the model wasn't able to learn short word intonation. This is a model training issue, not a text preprocessing fix.
+
+### Best Practice for Single Words
+When using Piper for voice notifications:
+- Never send single short words alone
+- Always wrap in a sentence: "Your order is ready" instead of "ready"
+- Repeat important words: "Warning, warning" for critical alerts
+
+---
+
 ## Contributing
 
 Add new problematic words here with:
