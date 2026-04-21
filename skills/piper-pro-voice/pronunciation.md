@@ -362,6 +362,17 @@ When using Piper for voice notifications:
 
 ---
 
+### Sentence Type Intonation (from GitHub Discussion #477)
+| Input | Pronounced As | Should Be | Workaround |
+|-------|----------------|-----------|------------|
+| "Are you going?" | Flat intonation (sounds like statement) | Rising intonation for questions | Add context or use voice with expressive training |
+| "What a great day!" | Flat intonation | Exclamatory emphasis | Use higher-quality expressive voice |
+| Questions overall | Statement-like | Proper question rising tone | Some voices lack this training data |
+
+*Note:* Question and exclamation intonation largely depends on whether the voice dataset included those features. Some custom-trained voices handle this better. This is a voice quality issue, not fixable via text preprocessing.
+
+---
+
 ## Contributing
 
 Add new problematic words here with:
