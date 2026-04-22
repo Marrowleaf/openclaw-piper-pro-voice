@@ -220,6 +220,9 @@ When numbers have special meaning (phone numbers, zip codes, years), spell them 
 | Z | "zee" (US) | "zed" (UK) | Use "zed" for UK |
 | Herb | "erb" (US) | "herb" (UK) | Already good in UK voices |
 | Aluminium | "aloo-minium" (US) | "al-yoo-minium" (UK) | Use phonetic "al-yoo-min-ee-um" |
+| Schedule | "sked-yoo-l" (US) | "shed-yoo-l" (UK) | Use UK voice |
+| Privacy | "pry-vuh-see" (US) | "pry-vuh-si" (UK) | Voice-dependent |
+| Mobile | "moe-bile" (US) | "moe-byle" (UK) | Already good in UK voices |
 
 ### Software & Tech Terms
 | Input | Pronounced As | Should Be | Workaround |
@@ -274,6 +277,16 @@ Some Piper VITS models pronounce numbers 10+ as separate digits ("10" → "one z
 | Azure | "az-yur" | "az-hure" | UK: "az-yoo" |
 | Regex | "rej-ex" | "rej-ex" or "reg-ex" | Either works |
 | sudo | "soo-doo" | "soo-doo" | Already good |
+| WiFi | "why-fye" or "wee-fee" | "wee-fee" | Use "wee-fee" |
+| Router | "row-ter" | "rou-ter" | Use "rou-ter" |
+| Ethernet | "ee-ther-net" | "ee-ther-net" | Already good |
+| Server | "sar-ver" | "sar-ver" | Already good |
+| Database | "day-tuh-base" | "day-tuh-base" | Already generally OK |
+| XML | "x m l" | "ecks-em-ell" | Spell out |
+| JSON | "j-son" | "jay-son" | Use "jay-son" |
+| YAML | "yam-ul" | "yam-ul" | Already good |
+| OAuth | "oh-auth" | "oh-awth" | Use "oh-awth" |
+| POSIX | "pos-ix" | "poh-zix" | Spell out as "P-O-S-I-X" |
 
 ### Surname Pronunciation Tips
 Many surnames get mispronounced. Try these patterns:
@@ -316,10 +329,30 @@ Many surnames get mispronounced. Try these patterns:
 
 *Note:* Piper treats emoji as silence or skips them entirely. Strip all emojis from text before TTS processing.
 
+### Additional Problematic Characters
+| Input | Pronounced As | Should Be | Workaround |
+|-------|----------------|-----------|------------|
+| @ | "at" | (silence) | Remove before TTS (except in email addresses) |
+| # | "number" or "hash" | (silence) | Remove before TTS (hashtags) |
+| % | "percent" | (silence) | Keep for percentages but remove otherwise |
+| & | "and" | "and" | Already generally good |
+| * | "asterisk" | (silence) | Remove or replace with space |
+| ( ) | "left paren" / "right paren" | Pauses | Use spaces around parentheses |
+
 ### General Sound Quality Notes
 - Piper is a neural TTS, but some users report it sounds "flat" or "jumpy" compared to modern cloud TTS
 - This is a model limitation, not fixable via text preprocessing
 - Consider higher-quality voices like en_US-libritts-high for better results
+
+### Long Text Issues (GitHub Issue #211)
+Piper can become unintelligible after 1-2 minutes of continuous speech:
+
+| Issue | Description | Workaround |
+|-------|-------------|------------|
+| Mumbling after long text | Piper starts mumbling or becomes unintelligible after ~1-2 minutes of continuous text | Break long text into shorter segments with explicit pauses |
+| Flat streaming audio | Streaming output via pipe sounds flatter than file output | Use file output when possible (GitHub Issue #698) |
+
+*Note:* For long notifications, split into multiple shorter segments (e.g., < 30 seconds each) for better clarity.
 
 ---
 
